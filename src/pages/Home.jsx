@@ -7,7 +7,13 @@ export default function Home() {
     const loading = false;
     const error = null;
 
-
+    useEffect(() => {
+        const execUsers = () => {
+            const response = getUsers();
+            setUsers(response.data.results);
+                  
+        }
+    })
 
     if (loading) {
         return (
